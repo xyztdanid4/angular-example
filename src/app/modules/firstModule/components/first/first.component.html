@@ -1,0 +1,13 @@
+<h1 class="text-3xl font-bold underline">first component</h1>
+
+<div class="grid grid-cols-2 gap-2">
+  <app-shared-button></app-shared-button>
+  <app-shared-input></app-shared-input>
+</div>
+
+<div *ngIf="isLoading; else elseBlock">LOADING...</div>
+<ng-template #elseBlock>
+  <pre class="">
+  {{ first | json }}
+</pre>
+</ng-template>
