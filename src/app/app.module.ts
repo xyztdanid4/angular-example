@@ -7,6 +7,8 @@ import { SecondRouterComponent } from './modules/secondModule/second.router';
 import { AppRouterComponent } from './app.router';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { HttpClientModule } from '@angular/common/http';
+import { StoreModule } from '@ngrx/store';
+import { firstReducer } from './modules/firstModule/reducers/first.reducer';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     AppRoutingModule,
     CoreModule,
+    StoreModule.forRoot({ first: firstReducer })
   ],
   providers: [],
   bootstrap: [AppRouterComponent]
